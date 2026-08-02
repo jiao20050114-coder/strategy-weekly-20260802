@@ -3,493 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>策略周观点汇总 2026.08.02</title>
+  <title>策略周观点 2026.08.02</title>
   <style>
     :root {
-      --ink: #111827;
-      --sub: #4b5565;
-      --muted: #8792a3;
-      --navy: #0d1b35;
-      --navy2: #163a64;
-      --gold: #b7802d;
-      --gold2: #fff3dc;
-      --red: #b54708;
-      --blue: #255f9e;
-      --line: #d6deea;
-      --soft: #f4f7fb;
-      --panel: #ffffff;
-      --green: #1f7a4d;
-      --serif: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
-      --kai: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --ink:#101828; --sub:#475467; --muted:#8792a3;
+      --navy:#0c1d38; --navy2:#193e6b; --gold:#b9822d; --gold2:#fff4df;
+      --red:#b54708; --blue:#2b5f95; --line:#d9e1ec; --paper:#fffefa;
+      --serif:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif;
+      --kai:"Kaiti SC","STKaiti","KaiTi","Songti SC",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--ink);
+    *{box-sizing:border-box}
+    body{
+      margin:0;color:var(--ink);font-family:var(--sans);line-height:1.55;
       background:
-        linear-gradient(90deg, rgba(13, 27, 53, .035) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(13, 27, 53, .035) 1px, transparent 1px),
-        radial-gradient(circle at 8% 2%, rgba(183, 128, 45, .18), transparent 25%),
-        radial-gradient(circle at 86% 8%, rgba(37, 95, 158, .16), transparent 26%),
-        linear-gradient(180deg, #f8f5ef 0%, #eef3f8 48%, #f7f8fb 100%);
-      background-size: 28px 28px, 28px 28px, auto, auto, auto;
-      font-family: var(--sans);
-      line-height: 1.55;
+        linear-gradient(90deg,rgba(12,29,56,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(12,29,56,.035) 1px,transparent 1px),
+        radial-gradient(circle at 10% 4%,rgba(185,130,45,.18),transparent 28%),
+        radial-gradient(circle at 90% 0%,rgba(43,95,149,.16),transparent 26%),
+        linear-gradient(180deg,#f8f4ec 0%,#eef3f8 48%,#f9fafc 100%);
+      background-size:30px 30px,30px 30px,auto,auto,auto;
     }
-    .page {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 30px 30px 58px;
+    .page{max-width:1360px;margin:0 auto;padding:30px 30px 56px}
+    .hero{
+      position:relative;overflow:hidden;border-radius:24px;padding:36px 40px;color:#fff;
+      background:linear-gradient(118deg,rgba(9,23,45,.98),rgba(20,58,101,.96) 60%,rgba(105,73,36,.96));
+      box-shadow:0 28px 62px rgba(16,31,61,.24);border:1px solid rgba(255,255,255,.12)
     }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 22px;
-      padding: 34px 38px;
-      color: #fff;
-      background:
-        linear-gradient(115deg, rgba(10, 23, 45, .98) 0%, rgba(22, 58, 100, .97) 58%, rgba(101, 72, 35, .96) 100%);
-      box-shadow: 0 26px 60px rgba(16, 31, 61, .24);
-      border: 1px solid rgba(255,255,255,.1);
-    }
-    .hero:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255,255,255,.06) 1px, transparent 1px);
-      background-size: 34px 34px;
-      opacity: .22;
-    }
-    .hero:after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -120px;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.18);
-      background: radial-gradient(circle, rgba(255,255,255,.1), transparent 62%);
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.14fr .86fr;
-      gap: 28px;
-      align-items: end;
-    }
-    .eyebrow {
-      display: inline-flex;
-      padding: 4px 10px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 999px;
-      color: rgba(255,255,255,.82);
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-    h1 {
-      margin: 0 0 12px;
-      font-family: var(--serif);
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: 0;
-      line-height: 1.18;
-      text-shadow: 0 8px 20px rgba(0,0,0,.18);
-    }
-    .hero-lead {
-      margin: 0;
-      max-width: 780px;
-      color: rgba(255,255,255,.86);
-      font-size: 16px;
-      font-weight: 520;
-    }
-    .hero-key {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .metric {
-      padding: 16px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
-      border: 1px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(6px);
-    }
-    .metric b {
-      display: block;
-      font-family: var(--serif);
-      font-size: 34px;
-      line-height: 1;
-      margin-bottom: 7px;
-    }
-    .metric span { color: rgba(255,255,255,.78); font-size: 13px; }
-    .panel {
-      margin-top: 22px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.9)),
-        linear-gradient(135deg, rgba(183,128,45,.06), transparent 34%);
-      border: 1px solid rgba(217,225,236,.9);
-      border-radius: 24px;
-      box-shadow: 0 16px 38px rgba(16, 31, 61, .09);
-      overflow: hidden;
-    }
-    .panel-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      padding: 20px 24px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(90deg, rgba(255,255,255,.9), rgba(248,250,252,.62));
-    }
-    h2 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0;
-    }
-    .hint {
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .takeaways {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 18px;
-      padding: 22px 24px 24px;
-    }
-    .conclusion {
-      grid-column: span 8;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .conclusion-item:first-child { grid-column: span 2; }
-    .conclusion-item {
-      display: grid;
-      grid-template-columns: 36px 1fr;
-      gap: 12px;
-      padding: 16px 18px;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.95), rgba(249,251,254,.9)),
-        radial-gradient(circle at 0% 0%, rgba(183,128,45,.1), transparent 36%);
-      border: 1px solid #e5ebf3;
-      border-radius: 16px;
-    }
-    .num {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, var(--navy), var(--navy2));
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 14px;
-      box-shadow: 0 8px 18px rgba(13, 27, 53, .2);
-    }
-    .conclusion-item b { display: block; margin-bottom: 3px; font-family: var(--serif); font-size: 17px; }
-    .conclusion-item span { color: var(--sub); font-size: 14px; }
-    .stance-box {
-      grid-column: span 4;
-      padding: 15px;
-      border-radius: 18px;
-      background:
-        linear-gradient(180deg, #fff9ed, #ffffff),
-        radial-gradient(circle at 100% 0%, rgba(183,128,45,.14), transparent 38%);
-      border: 1px solid #f0dfbf;
-    }
-    .stance-title {
-      font-weight: 800;
-      margin-bottom: 12px;
-      color: #7a4b05;
-      font-family: var(--serif);
-      font-size: 18px;
-    }
-    .stance-row {
-      display: grid;
-      grid-template-columns: 86px 1fr;
-      gap: 10px;
-      padding: 11px 0;
-      border-top: 1px solid rgba(185,129,45,.18);
-    }
-    .stance-row:first-of-type { border-top: 0; padding-top: 0; }
-    .tag {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      height: 28px;
-      padding: 0 10px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 13px;
-      white-space: nowrap;
-      font-family: var(--sans);
-    }
-    .bull { background: #fff0e7; color: #ad3d00; }
-    .mild { background: #fff6d8; color: #875500; }
-    .neutral { background: #e9f1fb; color: #29577f; }
-    .themes {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-auto-rows: minmax(118px, auto);
-      gap: 14px;
-      padding: 22px 24px 24px;
-    }
-    .theme {
-      position: relative;
-      grid-column: span 3;
-      min-height: 112px;
-      padding: 17px 15px;
-      border-radius: 20px;
-      background:
-        linear-gradient(180deg, #ffffff, #f9fbfd),
-        radial-gradient(circle at 100% 0%, rgba(37,95,158,.08), transparent 45%);
-      border: 1px solid #e4ebf4;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
-    }
-    .theme:first-child {
-      grid-column: span 4;
-      grid-row: span 2;
-      padding: 22px 20px;
-      background:
-        linear-gradient(135deg, rgba(13, 27, 53, .98), rgba(22, 58, 100, .94)),
-        radial-gradient(circle at 100% 0%, rgba(216,161,77,.26), transparent 42%);
-      color: #fff;
-      border-color: rgba(255,255,255,.16);
-      box-shadow: 0 20px 42px rgba(13,27,53,.18);
-    }
-    .theme:first-child strong {
-      font-size: 24px;
-      color: #fff;
-    }
-    .theme:first-child span {
-      color: rgba(255,255,255,.82);
-      font-size: 15px;
-    }
-    .theme:first-child .bar { background: rgba(255,255,255,.18); height: 9px; }
-    .theme:nth-child(2),
-    .theme:nth-child(3) { grid-column: span 4; }
-    .theme:nth-child(n+4) { grid-column: span 2; }
-    .theme strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 16px;
-      margin-bottom: 7px;
-    }
-    .bar {
-      height: 7px;
-      border-radius: 999px;
-      background: #e9eef5;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-    .bar i {
-      display: block;
-      height: 100%;
-      background: linear-gradient(90deg, #a36a1d, #d8a14d);
-      border-radius: inherit;
-    }
-    .theme span { color: var(--sub); font-size: 13px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-auto-flow: dense;
-      gap: 18px;
-      padding: 22px 24px 26px;
-      counter-reset: broker-card;
-    }
-    .card {
-      position: relative;
-      grid-column: span 4;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.98), rgba(252,253,255,.96)),
-        radial-gradient(circle at 100% 0%, rgba(183,128,45,.08), transparent 36%);
-      border: 1px solid #dfe7f1;
-      border-radius: 18px;
-      padding: 20px 20px 18px;
-      min-height: 260px;
-      box-shadow: 0 10px 24px rgba(16, 31, 61, .055);
-      counter-increment: broker-card;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(16, 31, 61, .1);
-    }
-    .card.top {
-      grid-column: span 6;
-      min-height: 278px;
-    }
-    .card:nth-child(5),
-    .card:nth-child(6) { grid-column: span 6; }
-    .card:nth-child(7),
-    .card:nth-child(8),
-    .card:nth-child(9),
-    .card:nth-child(10) {
-      min-height: 292px;
-    }
-    .card:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 6px;
-      background: linear-gradient(180deg, var(--navy2), #245d96);
-    }
-    .card.top:before { background: linear-gradient(180deg, #a96e1f, #d0a052); }
-    .card:after {
-      content: counter(broker-card, decimal-leading-zero);
-      position: absolute;
-      right: 18px;
-      bottom: 8px;
-      font-family: var(--serif);
-      font-size: 58px;
-      line-height: 1;
-      color: rgba(13, 27, 53, .045);
-      pointer-events: none;
-    }
-    .card-head {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e8eef6;
-      margin-bottom: 13px;
-    }
-    .broker {
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 900;
-      margin-bottom: 4px;
-    }
-    .report {
-      color: var(--sub);
-      font-size: 13px;
-      font-family: var(--kai);
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 9px;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 22px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #f0f4f8;
-      color: #5a6675;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .view {
-      min-width: 70px;
-      height: 30px;
-      font-size: 13px;
-    }
-    .label {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .04em;
-      margin: 0 0 8px;
-      font-family: var(--serif);
-    }
-    .logic {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .logic li {
-      position: relative;
-      padding-left: 18px;
-      margin: 7px 0;
-      color: #27364a;
-      font-size: 14px;
-    }
-    .logic li:before {
-      content: "";
-      position: absolute;
-      left: 2px;
-      top: .72em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-    .sectors {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 12px;
-    }
-    .sectors span {
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #f1f5f9, #eaf0f7);
-      border: 1px solid #e1e8f1;
-      color: #34465e;
-      font-size: 12px;
-      font-weight: 650;
-    }
-    .summary-text {
-      white-space: pre-line;
-      margin: 0;
-      padding: 20px 22px 24px;
-      color: #1d2939;
-      font-size: 15px;
-      background:
-        linear-gradient(180deg, #fbfcfe, #fff),
-        radial-gradient(circle at 0% 0%, rgba(183,128,45,.08), transparent 34%);
-      border-radius: 0 0 16px 16px;
-      font-family: var(--kai);
-    }
-    .audit {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      padding: 20px 22px 22px;
-    }
-    .audit-box {
-      background: #fbfcfe;
-      border: 1px solid #e4ebf4;
-      border-radius: 14px;
-      padding: 15px;
-    }
-    .audit-box h3 {
-      margin: 0 0 9px;
-      font-size: 15px;
-    }
-    .audit-box ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--sub);
-      font-size: 13px;
-    }
-    .foot {
-      padding: 0 22px 22px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    @media (max-width: 980px) {
-      .hero-inner, .takeaways, .cards, .audit { grid-template-columns: 1fr; }
-      .conclusion, .stance-box, .card, .card.top, .card:nth-child(5), .card:nth-child(6) { grid-column: auto; }
-      .conclusion { grid-template-columns: 1fr; }
-      .conclusion-item:first-child { grid-column: auto; }
-      .themes { grid-template-columns: repeat(2, 1fr); }
-      .theme, .theme:first-child, .theme:nth-child(2), .theme:nth-child(3), .theme:nth-child(n+4) { grid-column: auto; grid-row: auto; }
-      .page { padding: 18px; }
-    }
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;opacity:.2}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end}
+    h1{margin:0 0 12px;font-family:var(--serif);font-size:46px;line-height:1.16;text-shadow:0 8px 20px rgba(0,0,0,.18)}
+    .lead{margin:0;max-width:820px;color:rgba(255,255,255,.86);font-weight:550}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .metric{padding:16px;border-radius:17px;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.22)}
+    .metric b{display:block;font-family:var(--serif);font-size:34px;line-height:1;margin-bottom:8px}
+    .metric span{font-size:13px;color:rgba(255,255,255,.78)}
+    .panel{margin-top:22px;border:1px solid rgba(217,225,236,.92);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.93);box-shadow:0 16px 38px rgba(16,31,61,.09)}
+    .panel-head{padding:20px 24px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(255,255,255,.92),rgba(248,250,252,.68))}
+    h2{margin:0;font-family:var(--serif);font-size:24px}
+    .stance-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr .8fr;gap:14px;padding:24px}
+    .stance-card{position:relative;min-height:138px;border-radius:20px;padding:20px;background:linear-gradient(180deg,#fff,#fbfcfe);border:1px solid #e3eaf3}
+    .stance-card.hot{background:linear-gradient(135deg,#fff1e7,#fff);border-color:#f1d9c8}
+    .stance-card.warn{background:linear-gradient(135deg,#f7f9fc,#fff);border-color:#dce5ef}
+    .stance-title{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-family:var(--serif);font-size:22px;font-weight:900}
+    .badge{display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:800}
+    .bull{background:#fff0e7;color:#ad3d00}.mild{background:#fff6d8;color:#875500}.neutral{background:#e9f1fb;color:#29577f}.cautious{background:#eef1f5;color:#566173}
+    .brokers{color:#1f2937;font-weight:650}
+    .note{margin-top:8px;color:var(--muted);font-size:13px}
+    .map{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px;padding:24px}
+    .box{border-radius:20px;border:1px solid #e3eaf3;background:linear-gradient(180deg,#fff,#fbfcfe);padding:20px}
+    .box.gold{background:linear-gradient(135deg,#fff9ed,#fff);border-color:#efdcbc}
+    .box h3{margin:0 0 14px;font-family:var(--serif);font-size:21px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:#edf3f8;border:1px solid #dfe8f2;color:#34465e;font-size:13px;font-weight:750}
+    .chip b{font-family:var(--serif);color:var(--navy)}
+    .theme-block{margin-top:14px;padding-top:14px;border-top:1px solid #e8eef6}
+    .theme-block:first-of-type{margin-top:0;padding-top:0;border-top:0}
+    .theme-title{font-family:var(--serif);font-weight:900;margin-bottom:8px;color:#7a4b05}
+    .theme-text{color:var(--sub);font-size:14px}
+    .cards{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;padding:24px;counter-reset:card}
+    .card{counter-increment:card;position:relative;grid-column:span 4;min-height:260px;border-radius:20px;padding:20px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(252,253,255,.96));border:1px solid #dfe7f1;box-shadow:0 10px 24px rgba(16,31,61,.055);overflow:hidden}
+    .card.primary{grid-column:span 6;min-height:282px}
+    .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--navy2),#245d96)}
+    .card.primary:before{background:linear-gradient(180deg,#a96e1f,#d0a052)}
+    .card:after{content:counter(card,decimal-leading-zero);position:absolute;right:18px;bottom:8px;font-family:var(--serif);font-size:58px;line-height:1;color:rgba(13,27,53,.045)}
+    .card-head{display:grid;grid-template-columns:1fr auto;gap:12px;padding-bottom:12px;border-bottom:1px solid #e8eef6;margin-bottom:13px}
+    .broker{font-family:var(--serif);font-size:23px;font-weight:900;margin-bottom:3px}
+    .report{font-family:var(--kai);font-size:13px;color:var(--sub)}
+    .meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+    .pill{display:inline-flex;align-items:center;min-height:22px;padding:2px 8px;border-radius:999px;background:#f0f4f8;color:#5a6675;font-size:12px;font-weight:750}
+    .view{height:30px;min-width:76px;font-size:13px}
+    .label{margin:0 0 8px;color:var(--gold);font-family:var(--serif);font-size:13px;font-weight:900}
+    ul{margin:0;padding:0;list-style:none}
+    li{position:relative;margin:7px 0;padding-left:18px;color:#27364a;font-size:14px}
+    li:before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+    .sectors{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+    .sectors span{padding:4px 8px;border-radius:999px;background:linear-gradient(180deg,#f1f5f9,#eaf0f7);border:1px solid #e1e8f1;color:#34465e;font-size:12px;font-weight:650}
+    @media(max-width:980px){.hero-inner,.stance-grid,.map,.cards{grid-template-columns:1fr}.card,.card.primary{grid-column:auto}.page{padding:18px}.metrics{grid-template-columns:repeat(3,1fr)}}
   </style>
 </head>
 <body>
@@ -498,253 +88,86 @@
       <div class="hero-inner">
         <div>
           <h1>策略周观点（2026.08.02）</h1>
-          <p class="hero-lead">本周策略共识从“科技单线进攻”转向“AI中期主线不变、短期风格再平衡”。多数机构认为指数已进入震荡筑底区间，配置上强调红利、周期、医药、消费与科技内部扩散的组合化应对。</p>
+          <p class="lead">本周策略判断从“科技拥挤回撤”转向“调整尾声、震荡修复”。多数机构认为8月修复窗口打开，但反弹并非无差别普涨，配置重心落在科技精选、红利底仓、资源周期和医药消费的再平衡。</p>
         </div>
-        <div class="hero-key">
-          <div class="metric"><b>10</b><span>机构样本</span></div>
-          <div class="metric"><b>9</b><span>偏多/中性偏多</span></div>
-          <div class="metric"><b>7</b><span>共识方向</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h2>本周核心结论</h2>
-
-      </div>
-      <div class="takeaways">
-        <div class="conclusion">
-          <div class="conclusion-item">
-            <div class="num">1</div>
-            <div><b>指数层面：震荡筑底概率高于趋势下行。</b><span>资金去化、拥挤缓释和政策稳定预期共同抬升市场底部支撑，但反弹斜率仍受科技拥挤和外部扰动约束。</span></div>
-          </div>
-          <div class="conclusion-item">
-            <div class="num">2</div>
-            <div><b>风格层面：从AI抱团转向“科技修复 + 非科技再平衡”。</b><span>AI产业趋势尚未被证伪，但短期定价逻辑从估值扩张切向订单、利润和现金流验证。</span></div>
-          </div>
-          <div class="conclusion-item">
-            <div class="num">3</div>
-            <div><b>配置层面：红利托底，周期和医药修复，科技看细分。</b><span>共识方向集中在AI硬件、红利、资源品、创新药、券商、消费和高端制造，特色机会更多落在Agent、液冷、油运、商业航天等细分领域。</span></div>
-          </div>
-        </div>
-        <div class="stance-box">
-          <div class="stance-title">多空分布</div>
-          <div class="stance-row"><span class="tag bull">偏多</span><div>广发证券、国信证券、华安证券</div></div>
-          <div class="stance-row"><span class="tag mild">中性偏多</span><div>中泰证券、中信建投、开源证券、浙商证券、华金证券、国海证券</div></div>
-          <div class="stance-row"><span class="tag neutral">中性</span><div>申万宏源</div></div>
+        <div class="metrics">
+          <div class="metric"><b>17</b><span>机构样本</span></div>
+          <div class="metric"><b>14</b><span>偏多/中性偏多</span></div>
+          <div class="metric"><b>0</b><span>明确看空</span></div>
         </div>
       </div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <h2>主线强度</h2>
-
-      </div>
-      <div class="themes">
-        <div class="theme"><strong>AI/科技硬件</strong><div class="bar"><i style="width:100%"></i></div><span>10家提及，仍是中期主线，但进入分化验证阶段。</span></div>
-        <div class="theme"><strong>红利/高股息</strong><div class="bar"><i style="width:70%"></i></div><span>7家提及，作为震荡期底仓和风格再平衡方向。</span></div>
-        <div class="theme"><strong>资源品/周期</strong><div class="bar"><i style="width:70%"></i></div><span>7家提及，工业金属、能化、有色与煤炭关注度较高。</span></div>
-        <div class="theme"><strong>医药/创新药</strong><div class="bar"><i style="width:70%"></i></div><span>7家提及，创新药出海与基本面优势是主要抓手。</span></div>
-        <div class="theme"><strong>非银/券商</strong><div class="bar"><i style="width:60%"></i></div><span>6家提及，受益市场修复和资本市场活跃度回升。</span></div>
-        <div class="theme"><strong>消费/内需</strong><div class="bar"><i style="width:60%"></i></div><span>6家提及，低位白酒、服务消费、地产链有修复弹性。</span></div>
-        <div class="theme"><strong>高端制造</strong><div class="bar"><i style="width:50%"></i></div><span>5家提及，机械、机器人、军工和商业航天是主要细分。</span></div>
+      <div class="panel-head"><h2>多空观点</h2></div>
+      <div class="stance-grid">
+        <div class="stance-card hot">
+          <div class="stance-title"><span class="badge bull">偏多</span> 6家</div>
+          <div class="brokers">中信证券、广发证券、华安证券、方正证券、财通证券、国海证券</div>
+        </div>
+        <div class="stance-card">
+          <div class="stance-title"><span class="badge mild">中性偏多</span> 8家</div>
+          <div class="brokers">华泰证券、兴业证券、中信建投、国信证券、东吴证券、开源证券、中银证券、中国银河</div>
+        </div>
+        <div class="stance-card">
+          <div class="stance-title"><span class="badge neutral">中性</span> 2家</div>
+          <div class="brokers">申万宏源、中泰证券</div>
+        </div>
+        <div class="stance-card warn">
+          <div class="stance-title"><span class="badge cautious">偏谨慎</span> 1家</div>
+          <div class="brokers">国金证券</div>
+          <div class="note">无机构明确转向看空。</div>
+        </div>
       </div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <h2>机构观点速览</h2>
-
+      <div class="panel-head"><h2>共识与分歧</h2></div>
+      <div class="map">
+        <div class="box gold">
+          <h3>共识方向</h3>
+          <div class="chips">
+            <span class="chip"><b>AI/科技</b> 修复但需精选</span>
+            <span class="chip"><b>红利</b> 震荡期底仓</span>
+            <span class="chip"><b>资源周期</b> 估值修复</span>
+            <span class="chip"><b>医药</b> 创新药景气</span>
+            <span class="chip"><b>非银</b> 市场活跃度回升</span>
+            <span class="chip"><b>消费内需</b> 低位修复</span>
+            <span class="chip"><b>高端制造</b> 景气和出海</span>
+          </div>
+        </div>
+        <div class="box">
+          <h3>分歧细分</h3>
+          <div class="theme-block"><div class="theme-title">AI内部</div><div class="theme-text">北美算力、国产算力、光模块/CPO、先进封装、半导体设备、晶圆代工、AI应用、Agent、军用AI、港股科技。</div></div>
+          <div class="theme-block"><div class="theme-title">红利底仓</div><div class="theme-text">银行、公用事业、煤炭、高股息、低波动现金流资产。</div></div>
+          <div class="theme-block"><div class="theme-title">周期修复</div><div class="theme-text">能化、油运、有色、工业金属、炼化、锂矿、基础化工、钢铁、建筑材料。</div></div>
+          <div class="theme-block"><div class="theme-title">内需与制造</div><div class="theme-text">白酒、乳品、零售、乘用车、地产链、白电、工程机械、造船、电网设备、机器人、商业航天。</div></div>
+        </div>
       </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>各家详细观点</h2></div>
       <div class="cards">
-        <article class="card top">
-          <div class="card-head">
-            <div><div class="broker">广发证券</div><div class="report">牛市中，什么时候才会出现“单顶”</div><div class="meta"><span class="pill">上周：空</span></div></div>
-            <span class="tag bull view">偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>“单顶”并非常态，通常需要不可逆资金冲击或盈利周期快速逆转。</li>
-            <li>本轮AI上涨主要由产业趋势驱动，科技链更接近多重顶部结构。</li>
-            <li>若垂类模型继续带动需求外溢，科技资产仍具备修复和再创新高空间。</li>
-          </ul>
-          <div class="sectors"><span>AI产业链</span><span>存储</span><span>垂类模型</span><span>科技成长</span></div>
-        </article>
-
-        <article class="card top">
-          <div class="card-head">
-            <div><div class="broker">申万宏源</div><div class="report">AI产业链重拾强势仍需步步为营</div><div class="meta"><span class="pill">上周：中性</span></div></div>
-            <span class="tag neutral view">中性</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>AI反弹更多是超跌修复，悲观持仓可能在反弹中继续释放。</li>
-            <li>科技大波段重启仍需重磅产业催化，三季报后估值锚将切向业绩。</li>
-            <li>配置上更重视非科技轮动与高股息修复。</li>
-          </ul>
-          <div class="sectors"><span>银行</span><span>非银</span><span>食品饮料</span><span>公用事业</span><span>医药生物</span><span>工业金属</span><span>基础化工</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">华安证券</div><div class="report">信心有待进一步夯实提振</div><div class="meta"><span class="pill">上周：空</span></div></div>
-            <span class="tag bull view">偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>成长科技深度调整后已进入估值修复布局区间。</li>
-            <li>本轮下跌更多来自海外映射和交易因素，国内中报景气仍有支撑。</li>
-            <li>AI链上中游和扩散方向是主要修复线索。</li>
-          </ul>
-          <div class="sectors"><span>光模块</span><span>光纤</span><span>液冷</span><span>数据中心/AIDC</span><span>存储</span><span>机器人</span><span>游戏</span><span>软件</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">中泰证券</div><div class="report">8月，全球AI的多空“胜负手”有哪些？</div><div class="meta"><span class="pill">上周：空</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>全球AI周期仍是市场胜负手，空头逻辑不足以证明产业周期见顶。</li>
-            <li>8月中旬前市场处于震荡筑底期，待扰动明晰和资金出清后修复概率提升。</li>
-            <li>配置重心从上游硬件转向电力能源、付费软件Agent及军用AI。</li>
-          </ul>
-          <div class="sectors"><span>能化/油运</span><span>工程机械</span><span>电力设备</span><span>软件Agent</span><span>军用AI</span><span>黄金</span><span>有色</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">中信建投</div><div class="report">哪些热点有望继续上涨？</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>市场风格由成长进一步向低位消费和价值切换，情绪已有修复迹象。</li>
-            <li>AI仍是中期景气主线，但高位算力硬件进入分化阶段。</li>
-            <li>热点由硬件向AI应用、机器人、新能源、创新药和低位修复方向扩散。</li>
-          </ul>
-          <div class="sectors"><span>AIGC</span><span>文化传媒</span><span>数据要素</span><span>机器人</span><span>储能</span><span>新能源汽车</span><span>锂电池</span><span>创新药</span><span>消费</span><span>地产</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">国信证券</div><div class="report">如何看当下红利持续性？</div><div class="meta"><span class="pill">上周：偏多</span></div></div>
-            <span class="tag bull view">偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>科技回落、活跃资金离场与长线资金流入共同推升红利表现。</li>
-            <li>牛市格局未被破坏，当前仍处布局再平衡窗口。</li>
-            <li>除红利外，继续关注医药、券商、低位内需与科技内部扩散。</li>
-          </ul>
-          <div class="sectors"><span>红利</span><span>医药</span><span>券商</span><span>地产</span><span>白酒</span><span>AI应用</span><span>港股科技</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">开源证券</div><div class="report">投资策略周报：拥挤修复途中</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>科技叙事和流动性压力有所缓解，但高拥挤仍是市场节奏核心锚。</li>
-            <li>短期重在再平衡，寻找涨幅有限、持仓较低且有业绩支撑的方向。</li>
-            <li>中期牛市逻辑未破坏，但需降低斜率预期。</li>
-          </ul>
-          <div class="sectors"><span>微盘股</span><span>银行</span><span>公用事业</span><span>有色</span><span>煤炭</span><span>基础化工</span><span>农林牧渔</span><span>医药</span><span>非银</span><span>国产算力</span><span>半导体</span><span>PCB</span><span>液冷</span><span>商业航天</span><span>军工</span><span>机器人</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">浙商证券</div><div class="report">波动犹在但见曙光，原仓等待反弹</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>底部区域相对清晰，但拥挤消化和盘整仍需时间。</li>
-            <li>中线仓位继续等待修复，短线可在回踩整固时参与反弹。</li>
-            <li>科技之外的再平衡方向已逐步走出。</li>
-          </ul>
-          <div class="sectors"><span>证券</span><span>创新药</span><span>恒生科技</span><span>传媒</span><span>计算机</span><span>有色</span><span>中字头</span><span>双创反弹</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">华金证券</div><div class="report">八月震荡筑底，科技成长仍是主线</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>8月A股仍可能震荡筑底，慢牛趋势并未改变。</li>
-            <li>成长和消费风格或相对占优，大小盘风格趋于均衡。</li>
-            <li>行业配置强调科技成长、部分周期和消费的均衡组合。</li>
-          </ul>
-          <div class="sectors"><span>半导体</span><span>AI硬件</span><span>AI应用</span><span>游戏</span><span>AI电力</span><span>锂电</span><span>有色金属</span><span>创新药</span><span>商业航天</span><span>大金融</span><span>消费</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <div><div class="broker">国海证券</div><div class="report">8月市场展望：关注反弹机会</div><div class="meta"><span class="pill">上周：空</span></div></div>
-            <span class="tag mild view">中性偏多</span>
-          </div>
-          <div class="label">核心判断</div>
-          <ul class="logic">
-            <li>成交额接近地量、资金流入和IPO担忧计价后，市场或进入情绪反转窗口。</li>
-            <li>AI定价由CapEx叙事转向业绩和现金流验证，科技情绪具备修复基础。</li>
-            <li>短期反弹弹性看创业板和科创板，降低波动则关注低拥挤方向。</li>
-          </ul>
-          <div class="sectors"><span>光模块龙头</span><span>国产算力</span><span>电池材料</span><span>锂矿</span><span>非银</span><span>创新药</span><span>大金融</span><span>白电</span></div>
-        </article>
+        <article class="card primary"><div class="card-head"><div><div class="broker">中信证券</div><div class="report">调整基本结束，8月修复可期</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>本轮调整更多是拥挤交易修正，而非全市场去杠杆冲击。</li><li>局部流动性压力基本消除，8月普遍修复概率提升。</li><li>科技内部需借反弹聚焦核心持仓，非AI负面叙事边际改善。</li></ul><div class="sectors"><span>能化</span><span>有色</span><span>非银</span><span>创新药</span><span>核心AI</span></div></article>
+        <article class="card primary"><div class="card-head"><div><div class="broker">华泰证券</div><div class="report">重视再平衡下的结构性机会</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>全球科技硬件扰动未完全结束，资金再平衡仍在演绎。</li><li>红利风格已凝聚共识，半年报季需锚定基本面改善方向。</li><li>配置上以低波红利打底，兼顾消费经营底部和创新药景气。</li></ul><div class="sectors"><span>银行</span><span>乳品</span><span>零售</span><span>乘用车</span><span>CXO</span><span>创新药</span><span>晶圆代工</span></div></article>
+        <article class="card primary"><div class="card-head"><div><div class="broker">广发证券</div><div class="report">牛市中，什么时候才会出现“单顶”</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>牛市“单顶”通常对应不可逆资金冲击或盈利周期快速逆转。</li><li>本轮AI上涨主要由产业趋势驱动，更接近多重顶部结构。</li><li>若垂类模型带来需求外溢，科技资产仍有修复和再创新高空间。</li></ul><div class="sectors"><span>AI产业链</span><span>存储</span><span>垂类模型</span><span>科技成长</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">申万宏源</div><div class="report">AI产业链重拾强势仍需步步为营</div><div class="meta"><span class="pill">上周：中性</span></div></div><span class="badge neutral view">中性</span></div><p class="label">核心判断</p><ul><li>AI反弹更多是超跌修复，悲观持仓可能在反弹中继续释放。</li><li>科技大波段重启仍需产业催化，三季报后估值锚将切向业绩。</li><li>科技休整期更重视非科技轮动与高股息修复。</li></ul><div class="sectors"><span>银行</span><span>非银</span><span>食品饮料</span><span>公用事业</span><span>医药</span><span>工业金属</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">兴业证券</div><div class="report">大跌之后的变与不变</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>股价、估值和筹码层面的分化明显收敛，今年已不再是极致分化市。</li><li>AI与非AI的景气分化尚未改变，配置性价比需回到景气判断。</li><li>跌出性价比的优质硬科技已进入较合意布局位置。</li></ul><div class="sectors"><span>光通信</span><span>北美算力链</span><span>优质硬科技</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">中信建投</div><div class="report">科技修复开始了吗？</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>无差别恐慌抛售阶段大概率结束，基本面重新成为定价锚。</li><li>韩国去杠杆、A股拥挤度、事件窗口和业绩定价均指向压力缓和。</li><li>8月有望开启修复行情，关注业绩更强的科技和制造方向。</li></ul><div class="sectors"><span>AI算力</span><span>半导体设备</span><span>有色</span><span>新能源</span><span>机械</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">国信证券</div><div class="report">如何看当下红利持续性？</div><div class="meta"><span class="pill">上周：偏多</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>科技回落和前期主导资金离场推升红利表现。</li><li>红利资产性价比仍较高，长线资金入市强化其持续性。</li><li>牛市格局不变，当前是布局再平衡窗口。</li></ul><div class="sectors"><span>红利</span><span>医药</span><span>券商</span><span>地产</span><span>白酒</span><span>AI应用</span><span>港股科技</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">东吴证券</div><div class="report">反弹的时间和空间研判</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>科技行情回摆幅度基本完成，但拥挤度仍高，需要时间消化。</li><li>产业趋势未逆转，后续科技硬件将从全面上涨转向分化修复。</li><li>更看重景气向上且被资金错杀的量增方向。</li></ul><div class="sectors"><span>国产算力</span><span>国产先进制程</span><span>半导体设备</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">国金证券</div><div class="report">再静候</div><div class="meta"><span class="pill">上周：中性偏谨慎</span></div></div><span class="badge cautious view">偏谨慎</span></div><p class="label">核心判断</p><ul><li>AI链反弹更像暴跌后的修复，国内筹码出清慢于海外。</li><li>巨头财报缓解但未消除担忧，反转仍需更多AI投入产出比验证。</li><li>非AI世界部分方向信号更清晰，红利和能源链具备防御价值。</li></ul><div class="sectors"><span>煤炭</span><span>电力</span><span>石油石化</span><span>工业金属</span><span>工程机械</span><span>电网设备</span><span>炼化</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">开源证券</div><div class="report">投资策略周报：拥挤修复途中</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>科技叙事和流动性压力有所缓解，但高拥挤仍是节奏核心锚。</li><li>短期重在再平衡，寻找涨幅有限、持仓较低且有业绩支撑的方向。</li><li>中期牛市逻辑未破坏，但需降低斜率预期。</li></ul><div class="sectors"><span>微盘股</span><span>银行</span><span>公用事业</span><span>有色</span><span>煤炭</span><span>基础化工</span><span>医药</span><span>国产算力</span><span>半导体</span><span>PCB</span><span>液冷</span><span>商业航天</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">方正证券</div><div class="report">一周复盘与前瞻：超跌反弹的窗口期到来</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>5-6月非科技调整、7月科技调整后，市场大部分风险已释放。</li><li>后续两个月处于修复行情有利窗口，市场有望迎来普涨修复。</li><li>科技超跌反弹、HALO资产和低位长期调整方向均有配置价值。</li></ul><div class="sectors"><span>海外算力</span><span>红利</span><span>核心资源</span><span>科技成长</span><span>低位内需</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">财通证券</div><div class="report">回调见尾声，利好在敲门</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>长期牛市未见结束征兆，中期回调已较充分。</li><li>科技向外扩散可能是阻力更小方向，红利现金流进入性价比区间。</li><li>进攻与防御两端均可配置，强调HALO和出海PLUS。</li></ul><div class="sectors"><span>航空运输</span><span>安防设备</span><span>快递</span><span>纺织化学品</span><span>固废治理</span><span>CPO</span><span>先进封装</span><span>半导体设备</span><span>创新药</span><span>工程机械</span><span>造船</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">中银证券</div><div class="report">混沌背后的主、次问题</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>AI产业尚未出现CAPEX收缩、商业回报恶化和技术路径证伪的共振拐点。</li><li>7月资金负反馈接近尾声，8月无需继续悲观。</li><li>科技更接近调整而非结束，云商具备防守反击属性。</li></ul><div class="sectors"><span>AI科技硬件</span><span>大型云商</span><span>机器人</span><span>智能体AI</span><span>物理AI</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">华安证券</div><div class="report">信心有待进一步夯实提振</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>市场已显超跌，成长科技深度调整后具备估值修复价值。</li><li>海外科技企稳、国内中报景气高增，AI上中游存在布局机会。</li><li>AI扩散方向有望接续算力主题。</li></ul><div class="sectors"><span>光模块</span><span>光纤</span><span>液冷</span><span>数据中心/AIDC</span><span>存储</span><span>机械设备</span><span>机器人</span><span>游戏</span><span>软件</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">中泰证券</div><div class="report">8月，全球AI的多空“胜负手”有哪些？</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge neutral view">中性</span></div><p class="label">核心判断</p><ul><li>全球AI周期仍是市场胜负手，空头逻辑需要重视但不足以证伪周期。</li><li>8月中旬前市场处于震荡筑底期，资金出清后修复概率提升。</li><li>配置重心从上游硬件转向电力能源、付费软件Agent和军用AI。</li></ul><div class="sectors"><span>能化/油运</span><span>工程机械</span><span>电力设备</span><span>软件Agent</span><span>军用AI</span><span>黄金</span><span>有色</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">中国银河</div><div class="report">市场韧性锚定哪些方向？</div><div class="meta"><span class="pill">上周：未纳入</span></div></div><span class="badge mild view">中性偏多</span></div><p class="label">核心判断</p><ul><li>短期市场大概率震荡整理、结构再平衡，指数下探空间收敛。</li><li>中报季关注真实业绩兑现能力和景气确定性。</li><li>科技成长产业趋势未终结，市场主线由单一走向多线并行。</li></ul><div class="sectors"><span>半导体产业链</span><span>元件</span><span>通信设备</span><span>储能/电力配套</span><span>人形机器人</span><span>商业航天</span><span>煤炭</span><span>煤化工</span><span>金融</span><span>公用事业</span><span>有色</span><span>建材</span><span>钢铁</span></div></article>
+        <article class="card"><div class="card-head"><div><div class="broker">国海证券</div><div class="report">关注反弹机会</div><div class="meta"><span class="pill">上周：中性偏多</span></div></div><span class="badge bull view">偏多</span></div><p class="label">核心判断</p><ul><li>成交额接近地量、资金流入和IPO担忧计价后，市场或进入情绪反转窗口。</li><li>AI定价由CapEx叙事转向业绩和现金流验证。</li><li>9月前创业板和科创板弹性较大，低拥挤方向可降低波动。</li></ul><div class="sectors"><span>光模块</span><span>国产算力</span><span>电池材料</span><span>锂矿</span><span>非银</span><span>创新药</span><span>大金融</span><span>白电</span></div></article>
       </div>
     </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h2>策略周观点文本版</h2>
-
-      </div>
-      <div class="summary-text">策略周观点（2026.08.02）
-
-多空观点
-
-偏多（3家）
-广发证券、国信证券、华安证券
-
-中性偏多（6家）
-中泰证券、中信建投、开源证券、浙商证券、华金证券、国海证券
-
-中性（1家）
-申万宏源
-
-行业轮动
-
-🔥 共识方向
-
-AI/科技硬件（10家提及）
-红利/高股息（7家提及）
-资源品/周期（7家提及）
-医药/创新药（7家提及）
-非银/券商（6家提及）
-消费/内需（6家提及）
-高端制造（5家提及）
-
-🔄 分歧与特色观点
-
-广发证券：存储、垂类模型。
-申万宏源：食品饮料、公用事业、工业金属。
-华安证券：光纤、液冷、数据中心/AIDC、游戏、软件。
-中泰证券：能化油运、软件Agent、军用AI。
-中信建投：AIGC、文化传媒、数据要素、新能源汽车。
-国信证券：白酒、港股科技。
-开源证券：微盘股、农林牧渔、液冷、商业航天。
-浙商证券：恒生科技、中字头。
-华金证券：AI电力、锂电、商业航天。
-国海证券：电池材料、锂矿、白电。</div>
-    </section>
-
   </main>
 </body>
 </html>
